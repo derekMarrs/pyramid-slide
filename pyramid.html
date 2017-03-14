@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #pyramid {
+            color: #9C486C;
+            line-height: 0;
+            font-size: 30px;
+            padding-bottom: 20px;
+            font-weight: lighter;
+        }
+
+        body {
+            font-family: "Courier New", monospace;
+            text-align: center;
+        }
+
+        #title {
+            background-color: #9C486C;
+            color: #ffffff;
+            font-size: 20px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        #form {
+            border: 1px solid #9C486C;
+            border-radius: 2px;
+            background-color: #E8E8E8;
+            margin-left: 300px;
+            margin-right: 300px;
+            margin-bottom: 10px;
+            margin-top: 2px;
+            height: 100%;
+        }
+
+        #tools {
+          background-color: grey;
+          padding-top: 5px;
+          padding-bottom: 5px;
+
+        }
+
+
+    </style>
+    <title>pyramid-slide</title>
+</head>
+<body>
+    <div id="title">
+      <h1>Pyramid Slide</h1>
+    </div>
+    <div id="form">
+      <div id="tools">
+        <form id="draw-form">
+
+          <label>
+            Brick Symbol:
+          </label>
+
+          <select name="char" id="char" onchange="pyramid()">
+            <option value="#">#</option>
+            <option value="@">@</option>
+            <option value="X">X</option>
+            <option value="$">$</option>
+          </select>
+
+          <label>
+            How high?
+          </label>
+
+          <input type="range" id="pyrHeight" name="pyrHeight" min="1" max="20" value="1" oninput="pyramid()">
+
+          <label id="heightNum"></label>
+
+        </form>
+      </div>
+
+      <br><br>
+
+      <div id="pyramid"></div>
+    </div>
+
+    <script src="pyramid.js"></script>
+</body>
+</html>
